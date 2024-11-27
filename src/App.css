@@ -1,0 +1,230 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Container Styles */
+.container {
+  background: linear-gradient(145deg, #ffecd2, #fcb69f);
+  border-radius: 16px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  color: #2a2a72;
+}
+
+/* Balance Section */
+#total {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+#Tbalance {
+  font-size: 2rem;
+  color: #2d6a4f;
+}
+
+/* Income and Expense Boxes */
+.boxes {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.salary, .expense {
+  background: linear-gradient(145deg, #f7c1d3, #ede4e7);
+  padding: 20px;
+  border-radius: 12px;
+  width: 45%;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.salary h1, .expense h1 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.salary h2 {
+  color: #2d6a4f;
+}
+
+.expense h2 {
+  color: #d90429;
+}
+
+/* Form Section */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+form input {
+  width: 45%;
+  padding: 10px 15px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #2d6a4f;
+  box-shadow: 0 0 5px rgba(45, 106, 79, 0.5);
+}
+
+form input:focus::placeholder {
+  color: #2d6a4f;
+}
+
+#buttonSub {
+  background: #2d6a4f;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+#buttonSub:hover {
+  background: #1b4332;
+}
+
+/* Transactions Section */
+.transactions {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.transactions h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #2a2a72;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+ul li .Name h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #111;
+}
+
+ul li .Name p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+ul li .amount {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+ul li .amount.income {
+  color: #2d6a4f;
+}
+
+ul li .amount.expense {
+  color: #d90429;
+}
+
+ul li .action {
+  background-color: #d90429;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+ul li .action:hover {
+  background-color: #ff1e56;
+}
+
+ul li:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .boxes {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .salary, .expense {
+    width: 100%;
+  }
+
+  form input {
+    width: 100%;
+  }
+
+  ul li {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  ul li .action {
+    width: 40px;
+    height: 40px;
+  }
+}
